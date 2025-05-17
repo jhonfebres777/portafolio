@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Moderno</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Fuentes de Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Íconos (Font Awesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar con efecto de vidrio -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <!-- Logo (reemplaza con tu imagen) -->
+            <div class="logo">
+                <a href="#"><img src="assets/png-transparent-t-shirt-nike-air-max-sportswear-clothing-t-shirt-tshirt-sport-active-shirt.png" alt="Logo"></a>
+            </div>
+            <!-- Menú central -->
+            <ul class="nav-links">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="#products">Productos</a></li>
+                <li><a href="#">Categorías</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+            <!-- Íconos derecha -->
+            <div class="nav-icons">
+                <a href="#"><i class="fas fa-search"></i></a>
+                <a href="#"><i class="fas fa-user"></i></a>
+                <a href="#" id="cart-icon"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+            <!-- Menú hamburguesa (mobile) -->
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Descubre lo último en moda</h1>
+            <p>Colección exclusiva 2024</p>
+            <button class="cta-button">Comprar ahora</button>
+        </div>
+        <!-- Imagen de hero (reemplaza con tu imagen) -->
+        <img  class="image-principal" src="assets/simbolo-nike.jpg" alt="Modelo con ropa moderna" class="hero-image">
+    </section>
+
+    <!-- Catálogo de Productos -->
+    <section class="products" id="products">
+        <h2>Nuestros Productos</h2>
+        <div class="product-grid">
+            <!-- Producto 1 -->
+            <div class="product-card">
+                <!-- Imagen del producto (reemplaza) -->
+                <img src="assets/47314262af06f85190b9366dec18709e.jpg" alt="Producto 1" class="product-image1">
+                <h3>Camiseta Minimal</h3>
+                <p class="price">$29.99</p>
+                <button class="add-to-cart">Añadir al carrito</button>
+            </div>
+            <!-- Producto 2 -->
+            <div class="product-card">
+                <img src="assets/4018aea74d95c67b8dac05ff0a9bd4a1.jpg" alt="Producto 2" class="product-image2">
+                <h3>Zapatos Urbanos</h3>
+                <p class="price">$59.99</p>
+                <button class="add-to-cart">Añadir al carrito</button>
+            </div>
+            <!-- Producto 3 -->
+            <div class="product-card">
+                <img src="assets/c43f6b16993f09303ff53f1091ca157c.jpg" alt="Producto 2" class="product-image2">
+                <h3>Zapatos Urbanos</h3>
+                <p class="price">$59.99</p>
+                <button class="add-to-cart">Añadir al carrito</button>
+            </div>
+            <!-- Producto 4-->
+            <div class="product-card">
+                <img src="assets/png-transparent-t-shirt-nike-air-max-sportswear-clothing-t-shirt-tshirt-sport-active-shirt.png" alt="Producto 2" class="product-image">
+                <h3>Zapatos Urbanos</h3>
+                <p class="price">$59.99</p>
+                <button class="add-to-cart">Añadir al carrito</button>
+            </div>
+            <!-- Producto 5 -->
+            <div class="product-card">
+                <img src="assets/product2.jpg" alt="Producto 2" class="product-image">
+                <h3>Zapatos Urbanos</h3>
+                <p class="price">$59.99</p>
+                <button class="add-to-cart">Añadir al carrito</button>
+            </div>
+            <!-- Añade más productos aquí -->
+        </div>
+        <!-- Paginación -->
+        <div class="pagination">
+            <button class="page-button">1</button>
+            <button class="page-button">2</button>
+            <button class="page-button">3</button>
+            <button class="page-button"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-columns">
+            <div class="footer-column">
+                <h4>Enlaces</h4>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Productos</a></li>
+                    <li><a href="#">Sobre nosotros</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Contacto</h4>
+                <p>email@ejemplo.com</p>
+                <p>+1 234 567 890</p>
+            </div>
+            <div class="footer-column">
+                <h4>Redes Sociales</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 E-commerce Moderno. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Modal del Carrito -->
+    <div class="cart-modal" id="cart-modal">
+        <div class="cart-content">
+            <span class="close-cart">&times;</span>
+            <h2>Tu Carrito</h2>
+            <div class="cart-items" id="cart-items">
+                <!-- Los productos añadidos aparecerán aquí -->
+            </div>
+            <div class="cart-total">
+                <p>Total: <span id="cart-total">$0.00</span></p>
+                <button class="checkout-button">Pagar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

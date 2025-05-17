@@ -1,0 +1,161 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Encabezado */
+header {
+    background:linear-gradient(to bottom right, #1f2def 41%, #0083f5 56%);;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Contenedor principal */
+main {
+    padding: 20px;
+    background: #e4e4e4;
+    max-width: 800px;
+    margin: 20px auto;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+article h2 {
+    color: #333;
+}
+
+/* Barra lateral */
+aside {
+    background: #e4e4e4;
+    padding: 15px;
+    margin: 20px auto;
+    max-width: 800px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Pie de página */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 0;
+}
+
+ img {
+                    display: block; 
+                    margin-bottom: 20px; 
+ }
+        
+ p {
+                    margin-top: 20px; 
+}
+            
+.header--button{
+    margin-top: 35px;
+    padding:15px;
+    width: 229px;
+
+    background-color: rgba(37, 37, 220, 0.885);
+}
+.header--button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    margin: 0;
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+}
+
+.header--button {
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.header--button {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.header--button{
+    background-color: #003f7f;
+    transform: translateY(2px);body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        margin-top: 35px;
+        background-color: #f4f4f4;
+        font-family: Arial, sans-serif;
+    }
+    
+    button {
+        padding: 15px 30px;
+        font-size: 18px;
+        font-weight: bold;
+        color: #fff;
+        background-color: #007bff;
+        border: none;
+        border-radius: 25px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+    }
+    
+    button:hover {
+        background-color: #0056b3;
+        transform: translateY(-2px);
+    }
+    
+    button:active {
+        background-color: #003f7f;
+        transform: translateY(2px);
+    }
+    
+}

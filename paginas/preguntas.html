@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuestionario sobre Inteligencia Artificial</title>
+    <style>
+        :root {
+            --primary-blue: #1a73e8;
+            --dark-blue: #0d47a1;
+            --light-blue: #e8f0fe;
+            --white: #ffffff;
+            --gray-light: #f5f5f5;
+            --gray-medium: #e0e0e0;
+            --gray-dark: #757575;
+            --text-dark: #212121;
+            --text-light: #ffffff;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+        }
+
+        body {
+            background-color: var(--white);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
+            color: var(--text-light);
+            padding: 2rem 0;
+            text-align: center;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+        }
+
+        .header h1 {
+            font-weight: 500;
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .form-card {
+            background-color: var(--white);
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border: 1px solid var(--gray-medium);
+        }
+
+        .form-group {
+            margin-bottom: 1.8rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.8rem;
+            color: var(--text-dark);
+            font-weight: 500;
+            font-size: 1rem;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.9rem;
+            background-color: var(--white);
+            border: 1px solid var(--gray-medium);
+            border-radius: 6px;
+            color: var(--text-dark);
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 0 3px var(--light-blue);
+        }
+
+        textarea.form-control {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .radio-group, .checkbox-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        .radio-option, .checkbox-option {
+            display: flex;
+            align-items: center;
+        }
+
+        .radio-option input, .checkbox-option input {
+            margin-right: 0.8rem;
+            accent-color: var(--primary-blue);
+            width: 18px;
+            height: 18px;
+        }
+
+        .range-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .range-value {
+            min-width: 40px;
+            text-align: center;
+            font-weight: bold;
+            color: var(--primary-blue);
+        }
+
+        input[type="range"] {
+            flex: 1;
+            -webkit-appearance: none;
+            height: 8px;
+            background: var(--gray-medium);
+            border-radius: 4px;
+            outline: none;
+        }
+
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 20px;
+            height: 20px;
+            background: var(--primary-blue);
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .section-title {
+            color: var(--primary-blue);
+            margin: 2rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--light-blue);
+        }
+
+        .button-group {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .btn {
+            padding: 0.9rem 1.8rem;
+            font-size: 1rem;
+            font-weight: 500;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            text-decoration: none;
+            border: none;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            box-shadow: var(--shadow);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--dark-blue);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(26, 115, 232, 0.2);
+        }
+
+        .btn-secondary {
+            background-color: var(--white);
+            color: var(--primary-blue);
+            border: 1px solid var(--primary-blue);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--light-blue);
+            transform: translateY(-2px);
+        }
+
+        .btn-redirect {
+            background-color: #34a853;
+            color: var(--white);
+            box-shadow: var(--shadow);
+        }
+
+        .btn-redirect:hover {
+            background-color: #2d8e47;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(52, 168, 83, 0.2);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--gray-dark);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .form-card {
+                padding: 1.5rem;
+            }
+            
+            .button-group {
+                flex-direction: column;
+            }
+            
+            .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>Cuestionario sobre Inteligencia Artificial</h1>
+            <p>Comparte tus opiniones sobre el presente y futuro de la IA</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="form-card">
+            <form id="aiForm">
+                <h3 class="section-title">1. Conocimientos básicos</h3>
+                
+                <div class="form-group">
+                    <label for="ai-definition" class="required">¿Cómo definirías la Inteligencia Artificial?</label>
+                    <textarea id="ai-definition" name="ai-definition" class="form-control" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label class="required">¿Con qué frecuencia usas aplicaciones con IA?</label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="ai-frequency" value="daily" required> Diariamente
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="ai-frequency" value="weekly"> Semanalmente
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="ai-frequency" value="monthly"> Mensualmente
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="ai-frequency" value="rarely"> Raramente
+                        </label>
+                    </div>
+                </div>
+
+                <h3 class="section-title">2. Aplicaciones de IA</h3>
+                
+                <div class="form-group">
+                    <label class="required">¿En qué áreas crees que la IA es más útil? (Máx. 3)</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="ai-impact" value="healthcare"> Salud
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="ai-impact" value="education"> Educación
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="ai-impact" value="business"> Negocios
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="ai-impact" value="entertainment"> Entretenimiento
+                        </label>
+                    </div>
+                </div>
+
+                <h3 class="section-title">3. Preocupaciones éticas</h3>
+                
+                <div class="form-group">
+                    <label class="required">¿Qué tan preocupado/a estás por los riesgos de la IA? (1-10)</label>
+                    <div class="range-container">
+                        <input type="range" id="ai-concern" name="ai-concern" min="1" max="10" value="5" required>
+                        <span class="range-value" id="rangeValue">5</span>
+                    </div>
+                </div>
+
+                <div class="button-group">
+                    <button type="reset" class="btn btn-secondary">Limpiar formulario</button>
+                    <button type="submit" class="btn btn-primary">Enviar respuestas</button>
+                    <a href="./practica.html" class="btn btn-redirect">pag principal</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>Encuesta sobre Inteligencia Artificial &copy; 2023</p>
+    </footer>
+
+    <script>
+        // Actualizar valor del rango
+        const rangeInput = document.getElementById('ai-concern');
+        const rangeValue = document.getElementById('rangeValue');
+        
+        rangeInput.addEventListener('input', function() {
+            rangeValue.textContent = this.value;
+        });
+
+        // Validar máximo 3 checkboxes
+        document.getElementById('aiForm').addEventListener('submit', function(e) {
+            const checkedBoxes = document.querySelectorAll('input[name="ai-impact"]:checked');
+            if (checkedBoxes.length > 3) {
+                e.preventDefault();
+                alert('Por favor selecciona máximo 3 áreas');
+            } else {
+                alert('¡Gracias por participar! Tus respuestas han sido enviadas.');
+                // Aquí iría el envío real del formulario
+            }
+        });
+    </script>
+</body>
+</html>
